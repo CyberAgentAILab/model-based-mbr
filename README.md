@@ -45,3 +45,22 @@ Computing the MBR output on WMT'19 En-De
 ```
 ./experiments/run_mbr.sh -d wmt19.en-de
 ```
+
+
+
+## Reference
+
+[Jinnai, Y., Morimura, T., Honda, U., Ariu, K., & Abe, K. (2023). Model-based minimum bayes risk decoding. arXiv preprint arXiv:2311.05263.](https://arxiv.org/abs/2311.05263)
+
+Bibtex:
+```
+@article{jinnai2023modelbased,
+  title={Model-Based Minimum Bayes Risk Decoding}, 
+  author={Yuu Jinnai and Tetsuro Morimura and Ukyo Honda and Kaito Ariu and Kenshi Abe},
+  year={2023},
+  journal={arXiv preprint arXiv:2311.05263}
+}
+```
+
+## Contact
+For any questions, feel free to raise an issue or contact me at jinnai_yu@cyberagent.co.jp.
