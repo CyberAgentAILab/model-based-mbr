@@ -69,3 +69,7 @@ Bibtex:
 
 ## Contact
 For any questions, feel free to raise an issue or contact me at jinnai_yu@cyberagent.co.jp.
+
+## Acknowledgements
+
+[MS COCO dataset](https://cocodataset.org/#home) is licensed under a [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).
