@@ -19,20 +19,20 @@ The code runs in two steps.
 1. `sample.sh` samples candidates.
 2. `run_mbr.sh` computes the MBR and MBMBR outputs from the sampled candidates.
 
-### Sampling candidates
+### 1. Sampling candidates
 
 ```
 ./experiments/sample.sh -d [DATASET] -s [NUMBER OF SAMPLES] 
 ```
 
-### Computing MBR
+### 2. Computing the MBR and MBMBR outputs
 
 ```
 ./experiments/run_mbr.sh -d [DATASET] -s [NUMBER OF SAMPLES]
 ```
 
 
-### Example: WMT'21 En-De
+## Example: WMT'21 En-De
 
 1. Use [sacrebleu](https://github.com/mjpost/sacrebleu) to prepare the benchmark dataset.
 ```
@@ -44,13 +44,13 @@ sacrebleu -t wmt19 -l en-de --echo ref > ./dataset/wmt19-text/wmt19.en-de.de
 2. Sampling sequences on WMT'19 En-De
 
 ```
-./experiments/sample.sh -d wmt19.en-de
+./experiments/sample.sh -d wmt19.en-de -s 32
 ```
 
 3. Computing the MBR output on WMT'19 En-De
 
 ```
-./experiments/run_mbr.sh -d wmt19.en-de
+./experiments/run_mbr.sh -d wmt19.en-de -s 32
 ```
 
 ## Reference
@@ -60,7 +60,7 @@ sacrebleu -t wmt19 -l en-de --echo ref > ./dataset/wmt19-text/wmt19.en-de.de
 Bibtex:
 ```
 @article{jinnai2023modelbased,
-  title={Model-Based Minimum Bayes Risk Decoding}, 
+  title={Model-Based Minimum Bayes Risk Decoding},
   author={Yuu Jinnai and Tetsuro Morimura and Ukyo Honda and Kaito Ariu and Kenshi Abe},
   year={2023},
   journal={arXiv preprint arXiv:2311.05263}
