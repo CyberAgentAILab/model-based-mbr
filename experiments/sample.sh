@@ -1,10 +1,10 @@
 DOMAIN=wmt19.en-de
 MODEL=None # Use "None" for using the sequence-to-sequence models.
 PROMPT=None
-NLINES=3
+NLINES=5
 NSAMPLES=32
 
-EPS=0.01
+EPS=0.02
 TOPK=0
 TOPP=1.0 # nucleus
 

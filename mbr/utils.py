@@ -72,8 +72,6 @@ def load_model(dataset, torch_device, model_name):
                 stop_tokens = []
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
-        # TODO: List models which needs to be quantized to 4 bits.
-        # Actually there is only a marginal drop in performance by 4 bit quants compared to 8bit.
         if ('Mistral' in model_name) or ('zephyr' in model_name) or ('mistral-7b-sft-beta' in model_name):
             model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True, load_in_4bit=True, device_map="auto")
         else:
@@ -83,7 +81,6 @@ def load_model(dataset, torch_device, model_name):
     return tokenizer, model, mname, stop_tokens
 
 def load_dataset(dataset, ref=False):
-    # TODO: Refactor: not so clean.
     if 'wmt19' in dataset:
         subdir_name = 'wmt19-text'
     elif 'iwslt17' in dataset:
@@ -91,7 +88,7 @@ def load_dataset(dataset, ref=False):
     elif dataset == 'xsum':
         subdir_name = 'xsum'
     elif dataset == 'cnndm':
-        subdir_name = 'cnn_cln' # TODO: wanna change the dirname but for backward compatibility.
+        subdir_name = 'cnn_cln'
     else:
         subdir_name = 'hf' # Using huggingface dataset
 

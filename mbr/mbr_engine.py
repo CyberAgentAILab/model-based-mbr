@@ -1,13 +1,9 @@
 import os
 import argparse
-from tqdm import tqdm
 import json
 
 import numpy as np
 import pandas as pd
-
-import boto3
-from evaluate import load
 
 from utility_func import *
 from utils import load_dataset, load_matrix, load_samples_from_file, result_dir, matrix_dir #, approx_dir, diverse_dir
@@ -47,8 +43,6 @@ if __name__ == "__main__":
     algorithm = args.algorithm
     recompute_matrix = args.recompute_matrix
 
-    # TODO: similarity function is not required when the matrix is already computed.
-    # Load utility function and evaluation functions
     compute_similarity, similarity = load_similarity(sim)
     compute_distance = load_distance(sim, compute_similarity)
     compute_evaluate, evaluator = load_evaluate(eval_func, sim, similarity)

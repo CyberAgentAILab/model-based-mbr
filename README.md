@@ -3,21 +3,21 @@
 
 This repository contains the code for the experiments in [Model-Based Minimum Bayes Risk Decoding](https://arxiv.org/abs/2311.05263).
 
-The code is provided mostly as is with little effort on refactoring.
+The code is tested on Ubuntu 20.04 using Python 3.8 and CUDA 11.0 (Docker image nvidia/cuda:11.0.3-cudnn8-devel-ubuntu20.04).
 
 ## Installation
 
 ```
-git clone git@github.com/jinnaiyuu/mbmbr
+git clone git@github.com/CyberAgentAILab/mbmbr
 cd mbmbr
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 The code runs in two steps.
 1. `sample.sh` samples candidates.
-2. `run_mbr.sh` computes the MBR candidate from the candidates sampled.
+2. `run_mbr.sh` computes the MBR and MBMBR outputs from the sampled candidates.
 
 ### Sampling candidates
 
@@ -36,20 +36,21 @@ The code runs in two steps.
 
 1. Use [sacrebleu](https://github.com/mjpost/sacrebleu) to prepare the benchmark dataset.
 ```
-sacrebleu -t wmt21 -l en-de --echo src > ./dataset/wmt21/wmt21.en-de.en
-sacrebleu -t wmt21 -l en-de --echo ref > ./dataset/wmt21/wmt21.en-de.de
+mkdir -p ./dataset/wmt19-text
+sacrebleu -t wmt19 -l en-de --echo src > ./dataset/wmt19-text/wmt19.en-de.en
+sacrebleu -t wmt19 -l en-de --echo ref > ./dataset/wmt19-text/wmt19.en-de.de
 ```
 
-2. Sampling sequences on WMT'21 En-De
+2. Sampling sequences on WMT'19 En-De
 
 ```
-./experiments/sample.sh -d wmt21.en-de
+./experiments/sample.sh -d wmt19.en-de
 ```
 
-3. Computing the MBR output on WMT'21 En-De
+3. Computing the MBR output on WMT'19 En-De
 
 ```
-./experiments/run_mbr.sh -d wmt21.en-de
+./experiments/run_mbr.sh -d wmt19.en-de
 ```
 
 ## Reference

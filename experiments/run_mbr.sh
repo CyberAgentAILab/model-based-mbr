@@ -3,9 +3,9 @@ set -e
 
 DOMAIN=wmt19.en-de
 MODEL=wmt19-en-de
-NLINES=3
+NLINES=5
 NSAMPLES=32
-EPS=0.01
+EPS=0.02
 TOPK=0
 TOPP=1.0
 SIM=bertscore
