@@ -16,3 +16,4 @@ subword-nmt==0.3.8
 scikit-learn-extra==0.3.0
 torchmetrics==0.10.3
 peft
+sacrebleu
