@@ -8,8 +8,8 @@ The code is tested on Ubuntu 20.04 using Python 3.8 and CUDA 11.0 (Docker image 
 ## Installation
 
 ```
-git clone git@github.com/CyberAgentAILab/mbmbr
-cd mbmbr
+git clone git@github.com/CyberAgentAILab/model-based-mbr
+cd model-based-mbr
 pip install -r requirements.txt
 ```
 
