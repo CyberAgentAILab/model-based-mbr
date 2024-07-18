@@ -53,6 +53,14 @@ sacrebleu -t wmt19 -l en-de --echo ref > ./dataset/wmt19-text/wmt19.en-de.de
 ./experiments/run_mbr.sh -d wmt19.en-de -s 32
 ```
 
+## mbrs Library
+
+Our repository is published to ensure the reproducibility of the research.  
+For running MBMBR, it is also available in the [mbrs](https://github.com/naist-nlp/mbrs) library.
+The library is maintained for running various versions of MBR decoding algorithms. It is compatible with both Huggingface's transformers and fairseq.  
+I recommend using the mbrs library for quick experiments.  
+It is also available via pypi: `pip install mbrs`.
+
 ## Reference
 
 [Jinnai, Y., Morimura, T., Honda, U., Ariu, K., & Abe, K. (2023). Model-based minimum bayes risk decoding. arXiv preprint arXiv:2311.05263.](https://arxiv.org/abs/2311.05263)
