@@ -1,7 +1,7 @@
 # Model-Based Minimum Bayes Risk Decoding
 
 
-This repository contains the code for the experiments in [Model-Based Minimum Bayes Risk Decoding](https://arxiv.org/abs/2311.05263).
+This repository contains the code for the experiments in [Model-Based Minimum Bayes Risk Decoding](https://openreview.net/pdf?id=qDUaH9xHVV).
 
 The code is tested on Ubuntu 20.04 using Python 3.8 and CUDA 11.0 (Docker image nvidia/cuda:11.0.3-cudnn8-devel-ubuntu20.04).
 
@@ -63,15 +63,17 @@ It is also available via pypi: `pip install mbrs`.
 
 ## Reference
 
-[Jinnai, Y., Morimura, T., Honda, U., Ariu, K., & Abe, K. (2023). Model-based minimum bayes risk decoding. arXiv preprint arXiv:2311.05263.](https://arxiv.org/abs/2311.05263)
+[Jinnai, Y., Morimura, T., Honda, U., Ariu, K., & Abe, K. (2024). Model-based minimum Bayes risk decoding for text generation. Forty-first International Conference on Machine Learning.](https://openreview.net/forum?id=qDUaH9xHVV)
 
 Bibtex:
 ```
-@article{jinnai2023modelbased,
-  title={Model-Based Minimum Bayes Risk Decoding},
+@inproceedings{
+  jinnai2024modelbased,
+  title={Model-Based Minimum Bayes Risk Decoding for Text Generation},
   author={Yuu Jinnai and Tetsuro Morimura and Ukyo Honda and Kaito Ariu and Kenshi Abe},
-  year={2023},
-  journal={arXiv preprint arXiv:2311.05263}
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024},
+  url={https://openreview.net/forum?id=qDUaH9xHVV}
 }
 ```
 
