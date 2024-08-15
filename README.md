@@ -1,7 +1,7 @@
 # Model-Based Minimum Bayes Risk Decoding
 
 
-This repository contains the code for the experiments in [Model-Based Minimum Bayes Risk Decoding](https://openreview.net/pdf?id=qDUaH9xHVV).
+This repository contains the code for the experiments in [Model-Based Minimum Bayes Risk Decoding](https://proceedings.mlr.press/v235/jinnai24a.html).
 
 The code is tested on Ubuntu 20.04 using Python 3.8 and CUDA 11.0 (Docker image nvidia/cuda:11.0.3-cudnn8-devel-ubuntu20.04).
 
@@ -55,26 +55,34 @@ sacrebleu -t wmt19 -l en-de --echo ref > ./dataset/wmt19-text/wmt19.en-de.de
 
 ## mbrs Library
 
-Our repository is published to ensure the reproducibility of the research.  
-For running MBMBR, it is also available in the [mbrs](https://github.com/naist-nlp/mbrs) library.
-The library is maintained for running various versions of MBR decoding algorithms. It is compatible with both Huggingface's transformers and fairseq.  
-I recommend using the mbrs library for quick experiments.  
-It is also available via pypi: `pip install mbrs`.
+MBMBR is also implemented in the [mbrs](https://github.com/naist-nlp/mbrs) library and is available via pypi: 
+
+```pip install mbrs```
+
+The mbrs library is maintained for running various versions of MBR decoding algorithms. It is compatible with both Huggingface's transformers and fairseq. 
 
 ## Reference
 
-[Jinnai, Y., Morimura, T., Honda, U., Ariu, K., & Abe, K. (2024). Model-based minimum Bayes risk decoding for text generation. Forty-first International Conference on Machine Learning.](https://openreview.net/forum?id=qDUaH9xHVV)
+[Jinnai, Y., Morimura, T., Honda, U., Ariu, K. &amp; Abe, K.. (2024). Model-Based Minimum Bayes Risk Decoding for Text Generation. <i>Proceedings of the 41st International Conference on Machine Learning</i>, in <i>Proceedings of Machine Learning Research</i>.](https://proceedings.mlr.press/v235/jinnai24a.html)
 
 Bibtex:
 ```
-@inproceedings{
-  jinnai2024modelbased,
-  title={Model-Based Minimum Bayes Risk Decoding for Text Generation},
-  author={Yuu Jinnai and Tetsuro Morimura and Ukyo Honda and Kaito Ariu and Kenshi Abe},
-  booktitle={Forty-first International Conference on Machine Learning},
-  year={2024},
-  url={https://openreview.net/forum?id=qDUaH9xHVV}
+
+@InProceedings{pmlr-v235-jinnai24a,
+  title = 	 {Model-Based Minimum {B}ayes Risk Decoding for Text Generation},
+  author =       {Jinnai, Yuu and Morimura, Tetsuro and Honda, Ukyo and Ariu, Kaito and Abe, Kenshi},
+  booktitle = 	 {Proceedings of the 41st International Conference on Machine Learning},
+  pages = 	 {22326--22347},
+  year = 	 {2024},
+  editor = 	 {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},
+  volume = 	 {235},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {21--27 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v235/main/assets/jinnai24a/jinnai24a.pdf},
+  url = 	 {https://proceedings.mlr.press/v235/jinnai24a.html},
 }
+
 ```
 
 ## Contact
